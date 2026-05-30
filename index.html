@@ -46,7 +46,7 @@ h1 {
 .swatch.santiago { background: var(--c-santiago); }
 .swatch.bilbao   { background: var(--c-bilbao); }
 .swatch.sydney   { background: var(--c-sydney); }
-.swatch.travel   { background: linear-gradient(135deg, #6b7280 50%, #d1d5db 50%); }
+.swatch.travel   { background: #6b7280; }
 
 .month {
   font-family: Georgia, serif;
@@ -84,66 +84,46 @@ h1 {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 3px;
-  padding: 5px 3px;
-  min-height: 56px;
+  padding: 4px 3px;
+  min-height: 60px;
   font-size: 11px;
   text-align: center;
   display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
 }
-.day .n { font-weight: 600; font-size: 13px; line-height: 1; }
+.day .n { font-weight: 600; font-size: 13px; line-height: 1; margin-bottom: 1px; }
 .day.wknd { background: #f3efe6; }
-.day.today { box-shadow: 0 0 0 2px var(--c-madrid) !important; }
+.day.today { box-shadow: 0 0 0 2px #c8a200 !important; }
 
-.day.houston  { background: var(--c-houston);  border-color: var(--c-houston);  color: #fff; }
-.day.maine    { background: var(--c-maine);    border-color: var(--c-maine);    color: #fff; }
-.day.madrid   { background: var(--c-madrid);   border-color: var(--c-madrid);   color: #1c1c1c; }
-.day.santiago { background: var(--c-santiago); border-color: var(--c-santiago); color: #fff; }
-.day.bilbao   { background: var(--c-bilbao);   border-color: var(--c-bilbao);   color: #fff; }
-.day.sydney   { background: var(--c-sydney);   border-color: var(--c-sydney);   color: #fff; }
-
-.day.travel { color: #fff; border: 0; }
-
-/* Gradientes de viaje */
-.day.t-iah-pwm { background: linear-gradient(135deg, var(--c-houston)  50%, var(--c-maine)    50%); }
-.day.t-pwm-iah { background: linear-gradient(135deg, var(--c-maine)    50%, var(--c-houston)  50%); }
-.day.t-pwm-mad { background: linear-gradient(135deg, var(--c-maine)    50%, var(--c-madrid)   50%); }
-.day.t-mad-pwm { background: linear-gradient(135deg, var(--c-madrid)   50%, var(--c-maine)    50%); }
-.day.t-pwm-scl { background: linear-gradient(135deg, var(--c-maine)    50%, var(--c-santiago) 50%); }
-.day.t-scl-pwm { background: linear-gradient(135deg, var(--c-santiago) 50%, var(--c-maine)    50%); }
-.day.t-bos-bio { background: linear-gradient(135deg, var(--c-maine)    50%, var(--c-bilbao)   50%); }
-.day.t-bio-iah { background: linear-gradient(135deg, var(--c-bilbao)   50%, var(--c-houston)  50%); }
-.day.t-bos-iah { background: linear-gradient(135deg, var(--c-maine)    50%, var(--c-houston)  50%); }
-.day.t-iah-bos { background: linear-gradient(135deg, var(--c-houston)  50%, var(--c-maine)    50%); }
-.day.t-bos-bil { background: linear-gradient(135deg, var(--c-maine)    50%, var(--c-bilbao)   50%); }
-.day.t-bil-bos { background: linear-gradient(135deg, var(--c-bilbao)   50%, var(--c-maine)    50%); }
-.day.t-iah-mad { background: linear-gradient(135deg, var(--c-houston)  50%, var(--c-madrid)   50%); }
-.day.t-mad-iah { background: linear-gradient(135deg, var(--c-madrid)   50%, var(--c-houston)  50%); }
-.day.t-iah-syd { background: linear-gradient(135deg, var(--c-houston)  50%, var(--c-sydney)   50%); }
-.day.t-syd-iah { background: linear-gradient(135deg, var(--c-sydney)   50%, var(--c-houston)  50%); }
-
-.flight {
-  font-size: 9px;
-  letter-spacing: 0.3px;
-  font-weight: 700;
-  margin-top: 3px;
+/* Fila por persona */
+.p-row {
+  width: 100%;
+  font-size: 7.5px;
+  padding: 1px 3px;
+  border-radius: 2px;
+  margin-top: 2px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.1px;
   white-space: nowrap;
-  text-shadow: 0 1px 1px rgba(0,0,0,.25);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
 }
-.person {
-  font-size: 8px;
-  margin-top: 1px;
-  opacity: 0.82;
-  font-style: italic;
-  line-height: 1;
-}
+.p-row.houston  { background: var(--c-houston);  color: #fff; }
+.p-row.maine    { background: var(--c-maine);    color: #fff; }
+.p-row.madrid   { background: var(--c-madrid);   color: #1c1c1c; }
+.p-row.santiago { background: var(--c-santiago); color: #fff; }
+.p-row.bilbao   { background: var(--c-bilbao);   color: #fff; }
+.p-row.sydney   { background: var(--c-sydney);   color: #fff; }
+.p-row.travel   { background: #6b7280;           color: #fff; }
 
 .note { font-size: 11px; color: var(--muted); margin-top: 24px; font-style: italic; line-height: 1.7; }
 
 @media (max-width: 640px) {
   .headers, .week { grid-template-columns: 32px repeat(7, 1fr); gap: 2px; }
-  .day { padding: 3px 1px; min-height: 48px; font-size: 10px; }
+  .day { padding: 3px 1px; min-height: 52px; }
   .day .n { font-size: 11px; }
-  .flight { font-size: 7.5px; letter-spacing: 0.1px; }
+  .p-row { font-size: 6.5px; padding: 1px 2px; }
   .wk-label { font-size: 9px; }
   h1 { font-size: 20px; }
 }
@@ -154,7 +134,7 @@ h1 {
 
 <header>
 <h1>Calendario de viajes</h1>
-<div class="subtitle">Mayo – Septiembre 2026 · Actualizado desde Google Calendar</div>
+<div class="subtitle">Mayo – Septiembre 2026</div>
 </header>
 
 <div class="legend">
@@ -202,20 +182,20 @@ h1 {
 <div class="day" data-date="2026-05-19"><div class="n">19</div></div>
 <div class="day" data-date="2026-05-20"><div class="n">20</div></div>
 <div class="day" data-date="2026-05-21"><div class="n">21</div></div>
-<div class="day travel t-iah-pwm" data-date="2026-05-22"><div class="n">22</div><span class="flight">IAH→PWM</span></div>
-<div class="day maine" data-date="2026-05-23"><div class="n">23</div></div>
-<div class="day maine" data-date="2026-05-24"><div class="n">24</div></div>
+<div class="day" data-date="2026-05-22"><div class="n">22</div><div class="p-row travel">Alf IAH→PWM</div></div>
+<div class="day wknd" data-date="2026-05-23"><div class="n">23</div><div class="p-row maine">Alf · PWM</div></div>
+<div class="day wknd" data-date="2026-05-24"><div class="n">24</div><div class="p-row maine">Alf · PWM</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">25–31<br>may</div>
-<div class="day travel t-pwm-mad" data-date="2026-05-25"><div class="n">25</div><span class="flight">BOS→MAD</span></div>
-<div class="day madrid" data-date="2026-05-26"><div class="n">26</div></div>
-<div class="day madrid" data-date="2026-05-27"><div class="n">27</div></div>
-<div class="day madrid" data-date="2026-05-28"><div class="n">28</div></div>
-<div class="day travel t-mad-pwm" data-date="2026-05-29"><div class="n">29</div><span class="flight">MAD→BOS</span></div>
-<div class="day maine" data-date="2026-05-30"><div class="n">30</div></div>
-<div class="day travel t-pwm-iah" data-date="2026-05-31"><div class="n">31</div><span class="flight">PWM→IAH</span></div>
+<div class="day" data-date="2026-05-25"><div class="n">25</div><div class="p-row travel">Alf BOS→MAD</div></div>
+<div class="day" data-date="2026-05-26"><div class="n">26</div><div class="p-row madrid">Alf · MAD</div></div>
+<div class="day" data-date="2026-05-27"><div class="n">27</div><div class="p-row madrid">Alf · MAD</div></div>
+<div class="day" data-date="2026-05-28"><div class="n">28</div><div class="p-row madrid">Alf · MAD</div></div>
+<div class="day" data-date="2026-05-29"><div class="n">29</div><div class="p-row travel">Alf MAD→BOS</div></div>
+<div class="day wknd" data-date="2026-05-30"><div class="n">30</div><div class="p-row maine">Alf · PWM</div></div>
+<div class="day wknd" data-date="2026-05-31"><div class="n">31</div><div class="p-row travel">Alf PWM→IAH</div></div>
 </div>
 
 <!-- ============ JUNIO ============ -->
@@ -227,53 +207,53 @@ h1 {
 <div class="day" data-date="2026-06-02"><div class="n">2</div></div>
 <div class="day" data-date="2026-06-03"><div class="n">3</div></div>
 <div class="day" data-date="2026-06-04"><div class="n">4</div></div>
-<div class="day travel t-iah-pwm" data-date="2026-06-05"><div class="n">5</div><span class="flight">IAH→PWM</span></div>
-<div class="day maine" data-date="2026-06-06"><div class="n">6</div></div>
-<div class="day maine" data-date="2026-06-07"><div class="n">7</div></div>
+<div class="day" data-date="2026-06-05"><div class="n">5</div><div class="p-row travel">Alf IAH→PWM</div></div>
+<div class="day wknd" data-date="2026-06-06"><div class="n">6</div><div class="p-row maine">Alf · PWM</div></div>
+<div class="day wknd" data-date="2026-06-07"><div class="n">7</div><div class="p-row maine">Alf · PWM</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">8–14<br>jun</div>
-<div class="day travel t-pwm-scl" data-date="2026-06-08"><div class="n">8</div><span class="flight">PWM→SCL</span></div>
-<div class="day santiago" data-date="2026-06-09"><div class="n">9</div></div>
-<div class="day santiago" data-date="2026-06-10"><div class="n">10</div></div>
-<div class="day travel t-scl-pwm" data-date="2026-06-11"><div class="n">11</div><span class="flight">SCL→PWM</span></div>
-<div class="day maine" data-date="2026-06-12"><div class="n">12</div></div>
-<div class="day maine" data-date="2026-06-13"><div class="n">13</div></div>
-<div class="day maine" data-date="2026-06-14"><div class="n">14</div></div>
+<div class="day" data-date="2026-06-08"><div class="n">8</div><div class="p-row travel">Alf PWM→SCL</div></div>
+<div class="day" data-date="2026-06-09"><div class="n">9</div><div class="p-row santiago">Alf · SCL</div></div>
+<div class="day" data-date="2026-06-10"><div class="n">10</div><div class="p-row santiago">Alf · SCL</div></div>
+<div class="day" data-date="2026-06-11"><div class="n">11</div><div class="p-row travel">Alf SCL→PWM</div></div>
+<div class="day" data-date="2026-06-12"><div class="n">12</div><div class="p-row maine">Alf · PWM</div></div>
+<div class="day wknd" data-date="2026-06-13"><div class="n">13</div><div class="p-row maine">Alf · PWM</div></div>
+<div class="day wknd" data-date="2026-06-14"><div class="n">14</div><div class="p-row maine">Alf · PWM</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">15–21<br>jun</div>
-<div class="day travel t-pwm-iah" data-date="2026-06-15"><div class="n">15</div><span class="flight">PWM→IAH</span></div>
+<div class="day" data-date="2026-06-15"><div class="n">15</div><div class="p-row travel">Alf PWM→IAH</div></div>
 <div class="day" data-date="2026-06-16"><div class="n">16</div></div>
 <div class="day" data-date="2026-06-17"><div class="n">17</div></div>
 <div class="day" data-date="2026-06-18"><div class="n">18</div></div>
-<div class="day travel t-iah-pwm" data-date="2026-06-19"><div class="n">19</div><span class="flight">IAH→PWM</span></div>
-<div class="day maine" data-date="2026-06-20"><div class="n">20</div></div>
-<div class="day maine" data-date="2026-06-21"><div class="n">21</div></div>
+<div class="day" data-date="2026-06-19"><div class="n">19</div><div class="p-row travel">Alf IAH→PWM</div></div>
+<div class="day wknd" data-date="2026-06-20"><div class="n">20</div><div class="p-row maine">Alf · PWM</div></div>
+<div class="day wknd" data-date="2026-06-21"><div class="n">21</div><div class="p-row maine">Alf · PWM</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">22–28<br>jun</div>
-<div class="day travel t-pwm-mad" data-date="2026-06-22"><div class="n">22</div><span class="flight">BOS→MAD</span></div>
-<div class="day madrid" data-date="2026-06-23"><div class="n">23</div></div>
-<div class="day madrid" data-date="2026-06-24"><div class="n">24</div></div>
-<div class="day madrid" data-date="2026-06-25"><div class="n">25</div></div>
-<div class="day travel t-mad-pwm" data-date="2026-06-26"><div class="n">26</div><span class="flight">MAD→BOS</span></div>
-<div class="day maine" data-date="2026-06-27"><div class="n">27</div></div>
-<div class="day maine" data-date="2026-06-28"><div class="n">28</div></div>
+<div class="day" data-date="2026-06-22"><div class="n">22</div><div class="p-row travel">Alf BOS→MAD</div></div>
+<div class="day" data-date="2026-06-23"><div class="n">23</div><div class="p-row madrid">Alf · MAD</div></div>
+<div class="day" data-date="2026-06-24"><div class="n">24</div><div class="p-row madrid">Alf · MAD</div></div>
+<div class="day" data-date="2026-06-25"><div class="n">25</div><div class="p-row madrid">Alf · MAD</div></div>
+<div class="day" data-date="2026-06-26"><div class="n">26</div><div class="p-row travel">Alf MAD→BOS</div></div>
+<div class="day wknd" data-date="2026-06-27"><div class="n">27</div><div class="p-row maine">Alf · PWM</div></div>
+<div class="day wknd" data-date="2026-06-28"><div class="n">28</div><div class="p-row maine">Alf · PWM</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">29 jun –<br>5 jul</div>
-<div class="day travel t-pwm-iah" data-date="2026-06-29"><div class="n">29</div><span class="flight">PWM→IAH</span></div>
+<div class="day" data-date="2026-06-29"><div class="n">29</div><div class="p-row travel">Alf PWM→IAH</div></div>
 <div class="day" data-date="2026-06-30"><div class="n">30</div></div>
 <div class="day" data-date="2026-07-01"><div class="n">1</div></div>
-<div class="day travel t-bos-bio" data-date="2026-07-02"><div class="n">2</div><span class="flight">BOS→BIO</span><span class="person">Isa</span></div>
-<div class="day" data-date="2026-07-03"><div class="n">3</div></div>
-<div class="day wknd" data-date="2026-07-04"><div class="n">4</div></div>
-<div class="day travel t-iah-syd" data-date="2026-07-05"><div class="n">5</div><span class="flight">IAH→SYD</span><span class="person">Alf</span></div>
+<div class="day" data-date="2026-07-02"><div class="n">2</div><div class="p-row travel">Isa BOS→BIO</div></div>
+<div class="day" data-date="2026-07-03"><div class="n">3</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-07-04"><div class="n">4</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-07-05"><div class="n">5</div><div class="p-row travel">Alf IAH→SYD</div><div class="p-row bilbao">Isa · BIO</div></div>
 </div>
 
 <!-- ============ JULIO ============ -->
@@ -281,46 +261,46 @@ h1 {
 
 <div class="week">
 <div class="wk-label">6–12<br>jul</div>
-<div class="day sydney" data-date="2026-07-06"><div class="n">6</div><span class="person">Alf</span></div>
-<div class="day sydney" data-date="2026-07-07"><div class="n">7</div><span class="person">Alf</span></div>
-<div class="day sydney" data-date="2026-07-08"><div class="n">8</div><span class="person">Alf</span></div>
-<div class="day sydney" data-date="2026-07-09"><div class="n">9</div><span class="person">Alf · N+J→IAH</span></div>
-<div class="day travel t-syd-iah" data-date="2026-07-10"><div class="n">10</div><span class="flight">SYD→IAH</span><span class="person">Alf · N+J·IAH</span></div>
-<div class="day houston" data-date="2026-07-11"><div class="n">11</div><span class="person">Nago·Jon</span></div>
-<div class="day travel t-iah-bos" data-date="2026-07-12"><div class="n">12</div><span class="flight">IAH→BOS</span><span class="person">N+J</span></div>
+<div class="day" data-date="2026-07-06"><div class="n">6</div><div class="p-row sydney">Alf · SYD</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-07"><div class="n">7</div><div class="p-row sydney">Alf · SYD</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-08"><div class="n">8</div><div class="p-row sydney">Alf · SYD</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-09"><div class="n">9</div><div class="p-row sydney">Alf · SYD</div><div class="p-row bilbao">Isa · BIO</div><div class="p-row travel">N+J BOS→IAH</div></div>
+<div class="day" data-date="2026-07-10"><div class="n">10</div><div class="p-row travel">Alf SYD→IAH</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-07-11"><div class="n">11</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-07-12"><div class="n">12</div><div class="p-row bilbao">Isa · BIO</div><div class="p-row travel">N+J IAH→BOS</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">13–19<br>jul</div>
-<div class="day" data-date="2026-07-13"><div class="n">13</div></div>
-<div class="day" data-date="2026-07-14"><div class="n">14</div></div>
-<div class="day" data-date="2026-07-15"><div class="n">15</div></div>
-<div class="day" data-date="2026-07-16"><div class="n">16</div></div>
-<div class="day" data-date="2026-07-17"><div class="n">17</div></div>
-<div class="day wknd" data-date="2026-07-18"><div class="n">18</div></div>
-<div class="day wknd" data-date="2026-07-19"><div class="n">19</div></div>
+<div class="day" data-date="2026-07-13"><div class="n">13</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-14"><div class="n">14</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-15"><div class="n">15</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-16"><div class="n">16</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-17"><div class="n">17</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-07-18"><div class="n">18</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-07-19"><div class="n">19</div><div class="p-row bilbao">Isa · BIO</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">20–26<br>jul</div>
-<div class="day" data-date="2026-07-20"><div class="n">20</div></div>
-<div class="day" data-date="2026-07-21"><div class="n">21</div></div>
-<div class="day" data-date="2026-07-22"><div class="n">22</div></div>
-<div class="day" data-date="2026-07-23"><div class="n">23</div></div>
-<div class="day" data-date="2026-07-24"><div class="n">24</div></div>
-<div class="day wknd" data-date="2026-07-25"><div class="n">25</div></div>
-<div class="day wknd" data-date="2026-07-26"><div class="n">26</div></div>
+<div class="day" data-date="2026-07-20"><div class="n">20</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-21"><div class="n">21</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-22"><div class="n">22</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-23"><div class="n">23</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-24"><div class="n">24</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-07-25"><div class="n">25</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-07-26"><div class="n">26</div><div class="p-row bilbao">Isa · BIO</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">27 jul –<br>2 ago</div>
-<div class="day travel t-iah-mad" data-date="2026-07-27"><div class="n">27</div><span class="flight">IAH→MAD</span></div>
-<div class="day madrid" data-date="2026-07-28"><div class="n">28</div></div>
-<div class="day madrid" data-date="2026-07-29"><div class="n">29</div></div>
-<div class="day madrid" data-date="2026-07-30"><div class="n">30</div></div>
-<div class="day travel t-mad-iah" data-date="2026-07-31"><div class="n">31</div><span class="flight">MAD→IAH</span></div>
-<div class="day wknd" data-date="2026-08-01"><div class="n">1</div></div>
-<div class="day wknd" data-date="2026-08-02"><div class="n">2</div></div>
+<div class="day" data-date="2026-07-27"><div class="n">27</div><div class="p-row travel">Alf IAH→MAD</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-28"><div class="n">28</div><div class="p-row madrid">Alf · MAD</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-29"><div class="n">29</div><div class="p-row madrid">Alf · MAD</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-30"><div class="n">30</div><div class="p-row madrid">Alf · MAD</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-07-31"><div class="n">31</div><div class="p-row travel">Alf MAD→IAH</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-08-01"><div class="n">1</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-08-02"><div class="n">2</div><div class="p-row bilbao">Isa · BIO</div></div>
 </div>
 
 <!-- ============ AGOSTO ============ -->
@@ -328,46 +308,46 @@ h1 {
 
 <div class="week">
 <div class="wk-label">3–9<br>ago</div>
-<div class="day" data-date="2026-08-03"><div class="n">3</div></div>
-<div class="day" data-date="2026-08-04"><div class="n">4</div></div>
-<div class="day" data-date="2026-08-05"><div class="n">5</div></div>
-<div class="day" data-date="2026-08-06"><div class="n">6</div></div>
-<div class="day" data-date="2026-08-07"><div class="n">7</div></div>
-<div class="day wknd" data-date="2026-08-08"><div class="n">8</div></div>
-<div class="day wknd" data-date="2026-08-09"><div class="n">9</div></div>
+<div class="day" data-date="2026-08-03"><div class="n">3</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-08-04"><div class="n">4</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-08-05"><div class="n">5</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-08-06"><div class="n">6</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-08-07"><div class="n">7</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-08-08"><div class="n">8</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day wknd" data-date="2026-08-09"><div class="n">9</div><div class="p-row bilbao">Isa · BIO</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">10–16<br>ago</div>
-<div class="day" data-date="2026-08-10"><div class="n">10</div></div>
-<div class="day" data-date="2026-08-11"><div class="n">11</div></div>
-<div class="day" data-date="2026-08-12"><div class="n">12</div></div>
-<div class="day travel t-bos-bil" data-date="2026-08-13"><div class="n">13</div><span class="flight">BOS→BIO</span><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-14"><div class="n">14</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-15"><div class="n">15</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-16"><div class="n">16</div><span class="person">N+J</span></div>
+<div class="day" data-date="2026-08-10"><div class="n">10</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-08-11"><div class="n">11</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-08-12"><div class="n">12</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-08-13"><div class="n">13</div><div class="p-row bilbao">Isa · BIO</div><div class="p-row travel">N+J BOS→BIO</div></div>
+<div class="day" data-date="2026-08-14"><div class="n">14</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day wknd" data-date="2026-08-15"><div class="n">15</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day wknd" data-date="2026-08-16"><div class="n">16</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">17–23<br>ago</div>
-<div class="day bilbao" data-date="2026-08-17"><div class="n">17</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-18"><div class="n">18</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-19"><div class="n">19</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-20"><div class="n">20</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-21"><div class="n">21</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-22"><div class="n">22</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-23"><div class="n">23</div><span class="person">N+J</span></div>
+<div class="day" data-date="2026-08-17"><div class="n">17</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day" data-date="2026-08-18"><div class="n">18</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day" data-date="2026-08-19"><div class="n">19</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day" data-date="2026-08-20"><div class="n">20</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day" data-date="2026-08-21"><div class="n">21</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day wknd" data-date="2026-08-22"><div class="n">22</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day wknd" data-date="2026-08-23"><div class="n">23</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">24–30<br>ago</div>
-<div class="day bilbao" data-date="2026-08-24"><div class="n">24</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-25"><div class="n">25</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-26"><div class="n">26</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-27"><div class="n">27</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-28"><div class="n">28</div><span class="person">N+J</span></div>
-<div class="day bilbao" data-date="2026-08-29"><div class="n">29</div><span class="person">N+J</span></div>
-<div class="day travel t-bil-bos" data-date="2026-08-30"><div class="n">30</div><span class="flight">BER→BOS</span><span class="person">N+J</span></div>
+<div class="day" data-date="2026-08-24"><div class="n">24</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day" data-date="2026-08-25"><div class="n">25</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day" data-date="2026-08-26"><div class="n">26</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day" data-date="2026-08-27"><div class="n">27</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day" data-date="2026-08-28"><div class="n">28</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day wknd" data-date="2026-08-29"><div class="n">29</div><div class="p-row bilbao">Isa + N+J · BIO</div></div>
+<div class="day wknd" data-date="2026-08-30"><div class="n">30</div><div class="p-row bilbao">Isa · BIO</div><div class="p-row travel">N+J BER→BOS</div></div>
 </div>
 
 <!-- ============ SEPTIEMBRE ============ -->
@@ -375,9 +355,9 @@ h1 {
 
 <div class="week">
 <div class="wk-label">31 ago –<br>6 sep</div>
-<div class="day" data-date="2026-08-31"><div class="n">31</div></div>
-<div class="day" data-date="2026-09-01"><div class="n">1</div></div>
-<div class="day travel t-bio-iah" data-date="2026-09-02"><div class="n">2</div><span class="flight">BIO→IAH</span><span class="person">Isa</span></div>
+<div class="day" data-date="2026-08-31"><div class="n">31</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-09-01"><div class="n">1</div><div class="p-row bilbao">Isa · BIO</div></div>
+<div class="day" data-date="2026-09-02"><div class="n">2</div><div class="p-row travel">Isa BIO→IAH</div></div>
 <div class="day" data-date="2026-09-03"><div class="n">3</div></div>
 <div class="day" data-date="2026-09-04"><div class="n">4</div></div>
 <div class="day wknd" data-date="2026-09-05"><div class="n">5</div></div>
@@ -429,8 +409,8 @@ h1 {
 </div>
 
 <div class="note">
-  Días sin color = Houston · N+J = Nago y Jon<br>
-  Isa en Bilbao: 2 jul – 2 sep · Nago+Jon en Houston: 9–12 jul · Nago+Jon en Bilbao/Berlín: 13–30 ago
+  Días sin color = Houston (IAH) · Alf = Alfonso · N+J = Nago y Jon<br>
+  Isa en Bilbao: 2 jul – 2 sep · N+J en Bilbao: 13–30 ago
 </div>
 
 </div>
