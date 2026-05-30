@@ -16,6 +16,7 @@
   --c-madrid:   #c8a200;
   --c-santiago: #a8281f;
   --c-bilbao:   #7c4ea0;
+  --c-sydney:   #0a7490;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: var(--bg); }
@@ -44,6 +45,7 @@ h1 {
 .swatch.madrid   { background: var(--c-madrid); }
 .swatch.santiago { background: var(--c-santiago); }
 .swatch.bilbao   { background: var(--c-bilbao); }
+.swatch.sydney   { background: var(--c-sydney); }
 .swatch.travel   { background: linear-gradient(135deg, #6b7280 50%, #d1d5db 50%); }
 
 .month {
@@ -97,6 +99,7 @@ h1 {
 .day.madrid   { background: var(--c-madrid);   border-color: var(--c-madrid);   color: #1c1c1c; }
 .day.santiago { background: var(--c-santiago); border-color: var(--c-santiago); color: #fff; }
 .day.bilbao   { background: var(--c-bilbao);   border-color: var(--c-bilbao);   color: #fff; }
+.day.sydney   { background: var(--c-sydney);   border-color: var(--c-sydney);   color: #fff; }
 
 .day.travel { color: #fff; border: 0; }
 
@@ -115,6 +118,8 @@ h1 {
 .day.t-bil-bos { background: linear-gradient(135deg, var(--c-bilbao)   50%, var(--c-maine)    50%); }
 .day.t-iah-mad { background: linear-gradient(135deg, var(--c-houston)  50%, var(--c-madrid)   50%); }
 .day.t-mad-iah { background: linear-gradient(135deg, var(--c-madrid)   50%, var(--c-houston)  50%); }
+.day.t-iah-syd { background: linear-gradient(135deg, var(--c-houston)  50%, var(--c-sydney)   50%); }
+.day.t-syd-iah { background: linear-gradient(135deg, var(--c-sydney)   50%, var(--c-houston)  50%); }
 
 .flight {
   font-size: 9px;
@@ -158,6 +163,7 @@ h1 {
 <div class="legend-item"><span class="swatch madrid"></span> Madrid (MAD)</div>
 <div class="legend-item"><span class="swatch santiago"></span> Santiago (SCL)</div>
 <div class="legend-item"><span class="swatch bilbao"></span> Bilbao (BIO)</div>
+<div class="legend-item"><span class="swatch sydney"></span> Sydney (SYD)</div>
 <div class="legend-item"><span class="swatch travel"></span> Día de viaje</div>
 </div>
 
@@ -267,7 +273,7 @@ h1 {
 <div class="day travel t-bos-bio" data-date="2026-07-02"><div class="n">2</div><span class="flight">BOS→BIO</span><span class="person">Isa</span></div>
 <div class="day" data-date="2026-07-03"><div class="n">3</div></div>
 <div class="day wknd" data-date="2026-07-04"><div class="n">4</div></div>
-<div class="day wknd" data-date="2026-07-05"><div class="n">5</div></div>
+<div class="day travel t-iah-syd" data-date="2026-07-05"><div class="n">5</div><span class="flight">IAH→SYD</span></div>
 </div>
 
 <!-- ============ JULIO ============ -->
@@ -275,11 +281,11 @@ h1 {
 
 <div class="week">
 <div class="wk-label">6–12<br>jul</div>
-<div class="day" data-date="2026-07-06"><div class="n">6</div></div>
-<div class="day" data-date="2026-07-07"><div class="n">7</div></div>
-<div class="day" data-date="2026-07-08"><div class="n">8</div></div>
-<div class="day travel t-bos-iah" data-date="2026-07-09"><div class="n">9</div><span class="flight">BOS→IAH</span><span class="person">N+J</span></div>
-<div class="day houston" data-date="2026-07-10"><div class="n">10</div><span class="person">Nago·Jon</span></div>
+<div class="day sydney" data-date="2026-07-06"><div class="n">6</div></div>
+<div class="day sydney" data-date="2026-07-07"><div class="n">7</div></div>
+<div class="day sydney" data-date="2026-07-08"><div class="n">8</div></div>
+<div class="day sydney" data-date="2026-07-09"><div class="n">9</div><span class="person">N+J→IAH</span></div>
+<div class="day travel t-syd-iah" data-date="2026-07-10"><div class="n">10</div><span class="flight">SYD→IAH</span><span class="person">N+J·IAH</span></div>
 <div class="day houston" data-date="2026-07-11"><div class="n">11</div><span class="person">Nago·Jon</span></div>
 <div class="day travel t-iah-bos" data-date="2026-07-12"><div class="n">12</div><span class="flight">IAH→BOS</span><span class="person">N+J</span></div>
 </div>
