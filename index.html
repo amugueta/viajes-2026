@@ -18,6 +18,7 @@
   --c-bilbao:   #7c4ea0;
   --c-sydney:   #0a7490;
   --c-montreal: #b5541c;
+  --c-austin:   #c2185b;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: var(--bg); }
@@ -42,6 +43,7 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 .swatch.bilbao   { background: var(--c-bilbao); }
 .swatch.sydney   { background: var(--c-sydney); }
 .swatch.montreal { background: var(--c-montreal); }
+.swatch.austin   { background: var(--c-austin); }
 .swatch.travel   { background: #6b7280; }
 
 .month { font-family: Georgia, serif; font-size: 12px; text-transform: uppercase; letter-spacing: 2.5px; color: var(--muted); margin: 22px 0 8px; }
@@ -87,6 +89,7 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 .slot.bilbao   { background: var(--c-bilbao);   color: #fff; }
 .slot.sydney   { background: var(--c-sydney);   color: #fff; }
 .slot.montreal { background: var(--c-montreal); color: #fff; }
+.slot.austin   { background: var(--c-austin);   color: #fff; }
 .slot.travel   { background: #6b7280;           color: #fff; }
 
 .note { font-size: 11px; color: var(--muted); margin-top: 24px; font-style: italic; line-height: 1.7; }
@@ -106,7 +109,7 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 
 <header>
 <h1>Calendario de viajes</h1>
-<div class="subtitle">Mayo – Septiembre 2026 · orden: Alf · Isa · Nago · Jon</div>
+<div class="subtitle">Mayo – Noviembre 2026 · orden: Alf · Isa · Nago · Jon</div>
 </header>
 
 <div class="legend">
@@ -117,6 +120,7 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 <div class="legend-item"><span class="swatch bilbao"></span> Bilbao (BIO)</div>
 <div class="legend-item"><span class="swatch sydney"></span> Sydney (SYD)</div>
 <div class="legend-item"><span class="swatch montreal"></span> Montreal (YUL)</div>
+<div class="legend-item"><span class="swatch austin"></span> Austin (AUS)</div>
 <div class="legend-item"><span class="swatch travel"></span> Día de viaje</div>
 </div>
 
@@ -260,7 +264,7 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 <div class="day" data-date="2026-07-21"><div class="n">21</div><div class="slots"><div class="slot montreal">Alf · YUL</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day" data-date="2026-07-22"><div class="n">22</div><div class="slots"><div class="slot travel">Alf YUL→IAH</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day" data-date="2026-07-23"><div class="n">23</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-07-24"><div class="n">24</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-07-24"><div class="n">24</div><div class="slots"><div class="slot travel">Alf IAH⇄WAS</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-07-25"><div class="n">25</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-07-26"><div class="n">26</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 </div>
@@ -339,11 +343,11 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 
 <div class="week">
 <div class="wk-label">7–13<br>sep</div>
-<div class="day" data-date="2026-09-07"><div class="n">7</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-09-08"><div class="n">8</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-09-09"><div class="n">9</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-09-10"><div class="n">10</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-09-11"><div class="n">11</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-09-07"><div class="n">7</div><div class="slots"><div class="slot travel">Alf IAH→MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-09-08"><div class="n">8</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-09-09"><div class="n">9</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-09-10"><div class="n">10</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-09-11"><div class="n">11</div><div class="slots"><div class="slot travel">Alf MAD→IAH</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-09-12"><div class="n">12</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-09-13"><div class="n">13</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 </div>
@@ -379,6 +383,97 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 <div class="day" data-date="2026-10-02"><div class="n">2</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-10-03"><div class="n">3</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-10-04"><div class="n">4</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+</div>
+
+<div class="week">
+<div class="wk-label">5–11<br>oct</div>
+<div class="day" data-date="2026-10-05"><div class="n">5</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-06"><div class="n">6</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-07"><div class="n">7</div><div class="slots"><div class="slot travel">Alf IAH→MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-08"><div class="n">8</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-09"><div class="n">9</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-10-10"><div class="n">10</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-10-11"><div class="n">11</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+</div>
+
+<div class="week">
+<div class="wk-label">12–18<br>oct</div>
+<div class="day" data-date="2026-10-12"><div class="n">12</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-13"><div class="n">13</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-14"><div class="n">14</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-15"><div class="n">15</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-16"><div class="n">16</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-10-17"><div class="n">17</div><div class="slots"><div class="slot madrid">Alf · MAD</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-10-18"><div class="n">18</div><div class="slots"><div class="slot travel">Alf MAD→IAH</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+</div>
+
+<div class="week">
+<div class="wk-label">19–25<br>oct</div>
+<div class="day" data-date="2026-10-19"><div class="n">19</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-20"><div class="n">20</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-21"><div class="n">21</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-22"><div class="n">22</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-23"><div class="n">23</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-10-24"><div class="n">24</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-10-25"><div class="n">25</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+</div>
+
+<div class="week">
+<div class="wk-label">26 oct –<br>1 nov</div>
+<div class="day" data-date="2026-10-26"><div class="n">26</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-27"><div class="n">27</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-28"><div class="n">28</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-29"><div class="n">29</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-10-30"><div class="n">30</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-10-31"><div class="n">31</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-11-01"><div class="n">1</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+</div>
+
+<!-- ============ NOVIEMBRE ============ -->
+<div class="month">Noviembre</div>
+
+<div class="week">
+<div class="wk-label">2–8<br>nov</div>
+<div class="day" data-date="2026-11-02"><div class="n">2</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-03"><div class="n">3</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-04"><div class="n">4</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-05"><div class="n">5</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-06"><div class="n">6</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-11-07"><div class="n">7</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-11-08"><div class="n">8</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+</div>
+
+<div class="week">
+<div class="wk-label">9–15<br>nov</div>
+<div class="day" data-date="2026-11-09"><div class="n">9</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-10"><div class="n">10</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-11"><div class="n">11</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-12"><div class="n">12</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-13"><div class="n">13</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-11-14"><div class="n">14</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-11-15"><div class="n">15</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+</div>
+
+<div class="week">
+<div class="wk-label">16–22<br>nov</div>
+<div class="day" data-date="2026-11-16"><div class="n">16</div><div class="slots"><div class="slot austin">Alf &middot; AUS</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-17"><div class="n">17</div><div class="slots"><div class="slot austin">Alf &middot; AUS</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-18"><div class="n">18</div><div class="slots"><div class="slot austin">Alf &middot; AUS</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-19"><div class="n">19</div><div class="slots"><div class="slot austin">Alf &middot; AUS</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-20"><div class="n">20</div><div class="slots"><div class="slot austin">Alf &middot; AUS</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-11-21"><div class="n">21</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-11-22"><div class="n">22</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+</div>
+
+<div class="week">
+<div class="wk-label">23–29<br>nov</div>
+<div class="day" data-date="2026-11-23"><div class="n">23</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-24"><div class="n">24</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-25"><div class="n">25</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-26"><div class="n">26</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-11-27"><div class="n">27</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-11-28"><div class="n">28</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day wknd" data-date="2026-11-29"><div class="n">29</div><div class="slots"><div class="slot"></div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 </div>
 
 <div class="note">
