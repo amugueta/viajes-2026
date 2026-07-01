@@ -17,6 +17,7 @@
   --c-santiago: #a8281f;
   --c-bilbao:   #7c4ea0;
   --c-sydney:   #0a7490;
+  --c-montreal: #b5541c;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: var(--bg); }
@@ -40,6 +41,7 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 .swatch.santiago { background: var(--c-santiago); }
 .swatch.bilbao   { background: var(--c-bilbao); }
 .swatch.sydney   { background: var(--c-sydney); }
+.swatch.montreal { background: var(--c-montreal); }
 .swatch.travel   { background: #6b7280; }
 
 .month { font-family: Georgia, serif; font-size: 12px; text-transform: uppercase; letter-spacing: 2.5px; color: var(--muted); margin: 22px 0 8px; }
@@ -84,6 +86,7 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 .slot.santiago { background: var(--c-santiago); color: #fff; }
 .slot.bilbao   { background: var(--c-bilbao);   color: #fff; }
 .slot.sydney   { background: var(--c-sydney);   color: #fff; }
+.slot.montreal { background: var(--c-montreal); color: #fff; }
 .slot.travel   { background: #6b7280;           color: #fff; }
 
 .note { font-size: 11px; color: var(--muted); margin-top: 24px; font-style: italic; line-height: 1.7; }
@@ -113,6 +116,7 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 <div class="legend-item"><span class="swatch santiago"></span> Santiago (SCL)</div>
 <div class="legend-item"><span class="swatch bilbao"></span> Bilbao (BIO)</div>
 <div class="legend-item"><span class="swatch sydney"></span> Sydney (SYD)</div>
+<div class="legend-item"><span class="swatch montreal"></span> Montreal (YUL)</div>
 <div class="legend-item"><span class="swatch travel"></span> Día de viaje</div>
 </div>
 
@@ -197,8 +201,8 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 <div class="day" data-date="2026-06-15"><div class="n">15</div><div class="slots"><div class="slot travel">Alf PWM→IAH</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day" data-date="2026-06-16"><div class="n">16</div><div class="slots"><div class="slot houston">Alf · IAH</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day" data-date="2026-06-17"><div class="n">17</div><div class="slots"><div class="slot houston">Alf · IAH</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-06-18"><div class="n">18</div><div class="slots"><div class="slot travel">Alf IAH→PWM</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-06-19"><div class="n">19</div><div class="slots"><div class="slot maine">Alf · PWM</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-06-18"><div class="n">18</div><div class="slots"><div class="slot houston">Alf · IAH</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-06-19"><div class="n">19</div><div class="slots"><div class="slot travel">Alf IAH→PWM</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-06-20"><div class="n">20</div><div class="slots"><div class="slot maine">Alf · PWM</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-06-21"><div class="n">21</div><div class="slots"><div class="slot maine">Alf · PWM</div><div class="slot"></div><div class="slot"></div><div class="slot"></div></div></div>
 </div>
@@ -236,25 +240,25 @@ h1 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spac
 <div class="day" data-date="2026-07-09"><div class="n">9</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot travel">Nago BOS→IAH</div><div class="slot travel">Jon BOS→IAH</div></div></div>
 <div class="day" data-date="2026-07-10"><div class="n">10</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot houston">Nago · IAH</div><div class="slot houston">Jon · IAH</div></div></div>
 <div class="day wknd" data-date="2026-07-11"><div class="n">11</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot houston">Nago · IAH</div><div class="slot houston">Jon · IAH</div></div></div>
-<div class="day wknd" data-date="2026-07-12"><div class="n">12</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot travel">Nago IAH→BOS</div><div class="slot travel">Jon IAH→BOS</div></div></div>
+<div class="day wknd" data-date="2026-07-12"><div class="n">12</div><div class="slots"><div class="slot travel">Alf IAH→SYD</div><div class="slot bilbao">Isa · BIO</div><div class="slot travel">Nago IAH→BOS</div><div class="slot travel">Jon IAH→BOS</div></div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">13–19<br>jul</div>
-<div class="day" data-date="2026-07-13"><div class="n">13</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-07-14"><div class="n">14</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-07-15"><div class="n">15</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-07-16"><div class="n">16</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-07-17"><div class="n">17</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-07-13"><div class="n">13</div><div class="slots"><div class="slot sydney">Alf · SYD</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-07-14"><div class="n">14</div><div class="slots"><div class="slot sydney">Alf · SYD</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-07-15"><div class="n">15</div><div class="slots"><div class="slot sydney">Alf · SYD</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-07-16"><div class="n">16</div><div class="slots"><div class="slot sydney">Alf · SYD</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-07-17"><div class="n">17</div><div class="slots"><div class="slot travel">Alf SYD→IAH</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-07-18"><div class="n">18</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-07-19"><div class="n">19</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 </div>
 
 <div class="week">
 <div class="wk-label">20–26<br>jul</div>
-<div class="day" data-date="2026-07-20"><div class="n">20</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-07-21"><div class="n">21</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
-<div class="day" data-date="2026-07-22"><div class="n">22</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-07-20"><div class="n">20</div><div class="slots"><div class="slot travel">Alf IAH→YUL</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-07-21"><div class="n">21</div><div class="slots"><div class="slot montreal">Alf · YUL</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
+<div class="day" data-date="2026-07-22"><div class="n">22</div><div class="slots"><div class="slot travel">Alf YUL→IAH</div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day" data-date="2026-07-23"><div class="n">23</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day" data-date="2026-07-24"><div class="n">24</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
 <div class="day wknd" data-date="2026-07-25"><div class="n">25</div><div class="slots"><div class="slot"></div><div class="slot bilbao">Isa · BIO</div><div class="slot"></div><div class="slot"></div></div></div>
